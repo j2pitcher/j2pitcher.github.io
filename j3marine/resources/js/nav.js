@@ -1,7 +1,7 @@
 // This script will dynamically generate the navigation bar on all pages
 
 // Define the HTML content for the navigation bar
-let baseURL = "/"
+let baseURL = "/";
 
 if(currentPath.includes("/resources/pages/")) {
     baseURL = "resources/pages/";
