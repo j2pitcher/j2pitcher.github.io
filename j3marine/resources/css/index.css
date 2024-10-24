@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../assets/media/images/whiteBackground.png");
+    background-image: url("./../assets/media/images/whiteBackground.png");
     background-color: black;
     background-size: cover;
     background-position: top;
