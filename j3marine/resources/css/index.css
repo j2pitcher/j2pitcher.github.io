@@ -1,1 +1,142 @@
+body {
+    background-image: url("../../assets/media/images/whiteBackground.png");
+    background-color: black;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
 
+h1 {
+    text-align: center;
+    background-color: grey;
+    position-anchor: top;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li {
+    margin-right: 10px;
+}
+
+#nav ul li:last-child {
+    margin-right: 0;
+}
+
+#nav ul li button {
+    background-color: bisque;
+    box-shadow: 2px 4px 8px cornsilk;
+}
+
+#nav ul li button:active { 
+    background-color: blue;
+    color: white;
+}
+
+#nav ul li button:hover {
+    font-weight: bold;
+}
+
+#partsContainer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 4px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#partsContainer ul li {
+    margin-right: 10px;
+}
+
+#partsContainer ul li:last-child {
+    margin-right: 0;
+}
+
+table#csvTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: gray;
+    font-size: small;
+}
+
+table#csvTable, th, td {
+    border: 1px solid white;
+}
+
+table#csvTable th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+#pagination {
+    margin-top: 20px;
+}
+
+#pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#checkboxContainer {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: black;
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+#columnCheckboxes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#columnCheckboxes li {
+    margin-bottom: 5px;
+}
+
+#csvTable {
+    flex-grow: 1;
+}
+
+#columnSelector button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#columnSelector button:hover {
+    background-color: #0056b3;
+}
+
+#loadView {
+    background-color: grey;
+}
