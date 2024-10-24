@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>J3 Parts</title>
+        <link href="../css/index.css" rel="stylesheet">
 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+        <script src="../../resources/js/excel.js" defer></script>
+        <script src="../../resources/js/nav.js" defer></script>
+
+    </head>
+
+    <body>
+        <div id="header">
+        <h1>J3 Marine Parts Portal</h1>
+        </div>
+        <br>
+        <div id="nav">
+            <ul>
+                <li><button>Home Page</button></li>
+                <li><button>CRM Portal</button></li>
+                <li><button>Marina Management</button></li>
+                <li><button>Employee Portal</button></li>
+            </ul>
+        </div>
+
+        <div id="partsContainer" style="margin-top: 20px; background-color: gray; border: white 2px solid;">
+            <h2 style="text-align: center;">Review or lookup parts here. Please select appropriate vendor below.</h2>
+            <ul>
+                <li><button onclick="loadVendorData('mesco')">Mesco</button></li>
+                <li><button onclick="loadVendorData('kellogg')">Kellogg</button></li>
+                <li><button onclick="loadVendorData('wintron')">Wintron</button></li>
+            </ul>
+        </div>
+
+        <!-- Main container div box -->
+        <div class="main-container">
+            <!-- column selector box -->
+            <div id="columnSelector" style="margin-top: 20px;">
+                <h3>Select Columns to Display:</h3>
+
+                <!-- Checkbox container-->
+                <div id="checkboxContainer">
+                    <ul id="columnCheckboxes">
+                        <!-- Checkboxes for columns will be injected here -->
+                    </ul>
+                </div>
+                <button onclick="updateSelectedColumns()">Apply Selection</button>
+
+                <!-- Save view button -->
+
+                <button onclick="saveView()">Save this View</button>
+                <div id="loadView">
+                    <!-- Drop down to load saved views-->
+                    <h4>Load Saved View</h4>
+                    <select id="savedViewsDropdown" onchange="loadView(this.value)">
+                        <option value="">Select a view</option>
+                        <!-- Saved view will populate here -->
+                    </select>
+
+                    <!-- Optional delete button-->
+                     <button onclick="deleteView()">Delete Selected View</button>
+                </div>
+            </div>
+            
+            <!-- Table and search box -->
+             <div>
+                <h1 id="tableTitle" style="display: none;">Product Data</h1>
+                <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterRows()" />
+                <button onclick="clearFilter()">Clear Filter</button>
+
+
+                <table id="csvTable" style="display: none;">
+                    <thead>
+                        <!--Table Header will be injected here-->
+                    </thead>
+                    <tbody>
+                        <!--Table body will be injected here-->
+                    </tbody>
+                </table>
+
+                <div id="pagination" style="display: none;">
+                    <!--Pagination buttons will be injected here-->
+                </div>
+            </div>
+        </div>
+
+
+        
+    </body>
+</html>
