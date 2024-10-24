@@ -3,7 +3,7 @@
 // Define the HTML content for the navigation bar
 let baseURL = "/";
 
-if(currentPath.includes("/resources/pages/")) {
+if(currentPath.includes("resources/pages/")) {
     baseURL = "resources/pages/";
 }
 const navHTML = `
